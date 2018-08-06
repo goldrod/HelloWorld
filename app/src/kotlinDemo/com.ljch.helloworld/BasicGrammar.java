@@ -13,5 +13,10 @@ class BasicGrammar {
         return a + b
     }
 
+    //函数无返回值unit，可以省略
+    fun printSum(a:Int,b:Int){
+
+    }
+
 
 }
