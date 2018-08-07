@@ -1,3 +1,10 @@
+package designmode;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import designmode.observer.Observer;
+
 /**
  * 观察者模式：定义对象间一对多的依赖关系，当对象发生改变时，
  * 所有依赖他的对象都能得到通知并被自动更新
@@ -10,7 +17,7 @@
 //被观察者
 public class Observale<T>{
 
-    List<Observer> observers = new ArrayList<Observale>();
+    List<Observer> observers = new ArrayList<>();
 
     public void register(Observer observer){
         if(observer == null) return;
@@ -22,7 +29,7 @@ public class Observale<T>{
     }
 
     public void unRegister(Observer observer){
-        observers.remove(observer)
+        observers.remove(observer);
     }
 
     public void notifyObservers(T data){
@@ -33,7 +40,3 @@ public class Observale<T>{
 }
 
 
-//观察者实现接口
-public interface Observer<T>{
-    void update(Observale<T>,T data);
-}
