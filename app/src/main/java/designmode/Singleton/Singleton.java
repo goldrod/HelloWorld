@@ -1,4 +1,4 @@
-package designmode;
+package designmode.Singleton;
 
 /**
  * 单列模式：保证一个类只有一个实例，提供一个全局的访问点

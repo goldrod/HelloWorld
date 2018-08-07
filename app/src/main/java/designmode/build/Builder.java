@@ -1,4 +1,4 @@
-package designmode;
+package designmode.build;
 
 /**
  *
@@ -7,36 +7,36 @@ package designmode;
  *
  *
  **/
-public class Person {
+class Person {
 
-    public String name,
-    public String age,
-    public String sex,
+    private String name;
+    private String age;
+    private String sex;
 
     private Person(Builder builder){
-        this.name = builder.name
-        this.age = builder.age
-        this.sex = builder.sex
+        this.name = builder.name;
+        this.age = builder.age;
+        this.sex = builder.sex;
     }
 
     public static class Builder {
-        public String name,
-        public String age,
-        public String sex,
+        private String name;
+        private String age;
+        private String sex;
 
         public Builder setName(String name){
             this.name = name;
-            return this
+            return this;
         }
 
         public Builder setAge(String age){
             this.age = age;
-            return this
+            return this;
         }
 
         public Builder setSex(String sex){
             this.sex = sex;
-            return this
+            return this;
         }
 
         public Person build(){

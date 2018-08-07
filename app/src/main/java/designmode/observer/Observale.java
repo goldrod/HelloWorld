@@ -1,9 +1,7 @@
-package designmode;
+package designmode.observer;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import designmode.observer.Observer;
 
 /**
  * 观察者模式：定义对象间一对多的依赖关系，当对象发生改变时，
