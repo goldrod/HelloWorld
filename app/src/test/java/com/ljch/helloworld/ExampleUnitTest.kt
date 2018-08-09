@@ -1,6 +1,7 @@
 package com.ljch.helloworld
 
 import kotlinDemo.BasicGrammar
+import kotlinDemo.IdiomaticUsage
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -14,7 +15,7 @@ class ExampleUnitTest {
 
     @Test
     fun test() {
-        val test = BasicGrammar()
-        test.testMap()
+        val test = IdiomaticUsage("JichengLiu","ljch0403@163.com")
+        test.test()
     }
 }
