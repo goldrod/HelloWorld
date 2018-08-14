@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import com.rdf.cdk.CodeUtil
 
 import kotlinx.android.synthetic.main.fragment_main.*
 /**
@@ -32,6 +33,9 @@ class MainActivityFragment : Fragment() {
     //点击跳转页面
     private fun goToPage(position:Int){
         Log.i("MainActivityFragment", "position = $position")
+        val str = "kKETPG6oRbCjwwsYkQEDrQvPvu85UgiGq+Bt6Xwb3McEfpjKKfnBc9iX05akWkuRyLK2XFNgLesmwiepR7y7M7zA2DnaTsnh5IvsTDrAojs="
+        val result = CodeUtil.decodeQrCode(str)
+        Log.i("MainActivityFragment", result)
     }
 
 }
