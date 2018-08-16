@@ -1,6 +1,7 @@
 package com.ljch.helloworld
 
 import android.app.Fragment
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -33,9 +34,17 @@ class MainActivityFragment : Fragment() {
     //点击跳转页面
     private fun goToPage(position:Int){
         Log.i("MainActivityFragment", "position = $position")
-        val str = "kKETPG6oRbCjwwsYkQEDrQvPvu85UgiGq+Bt6Xwb3McEfpjKKfnBc9iX05akWkuRyLK2XFNgLesmwiepR7y7M7zA2DnaTsnh5IvsTDrAojs="
-        val result = CodeUtil.decodeQrCode(str)
-        Log.i("MainActivityFragment", result)
+        when(position) {
+            0 -> {
+                val str = "kKETPG6oRbCjwwsYkQEDrQvPvu85UgiGq+Bt6Xwb3McEfpjKKfnBc9iX05akWkuRyLK2XFNgLesmwiepR7y7M7zA2DnaTsnh5IvsTDrAojs="
+                val result = CodeUtil.decodeQrCode(str)
+                Log.i("MainActivityFragment", result)
+            }
+            1 -> {
+                val intent = Intent(activity, NDKActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 
 }
