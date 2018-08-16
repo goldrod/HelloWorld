@@ -1,7 +1,5 @@
 package com.rdf.cdk;
 
-import android.util.Log;
-
 import java.security.MessageDigest;
 
 public class MD5 {
@@ -24,10 +22,8 @@ public class MD5 {
             }
         } catch (Throwable e) {
             e.printStackTrace();
-            Log.e("MD5", "crypt faile", e);
         }
         return stringBuffer.toString();
     }
-
 
 }
