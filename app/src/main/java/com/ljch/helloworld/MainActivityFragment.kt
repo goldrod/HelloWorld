@@ -26,7 +26,7 @@ class MainActivityFragment : Fragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val myAdapter : ArrayAdapter<String> = ArrayAdapter(context,android.R.layout.simple_list_item_1,data)
+        val myAdapter : ArrayAdapter<String> = ArrayAdapter(activity,android.R.layout.simple_list_item_1,data)
         list_view.adapter = myAdapter
         list_view.onItemClickListener = AdapterView.OnItemClickListener{parent, view, position, id -> goToPage(position) }
     }
