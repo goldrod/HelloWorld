@@ -43,7 +43,7 @@ class IdiomaticUsage (val name:String,val email:String){
         println("Name $name")
 
         //遍历map
-        val map = mapOf("1" to "one",2 to "second")
+        val map = mapOf("1" to "one","2" to "second")
         for((k,v) in map){
             println("$k -> $v")
         }
@@ -55,7 +55,7 @@ class IdiomaticUsage (val name:String,val email:String){
         println(files?.size)
 
         //if not null and else 缩写
-        println(files?.size ?: "empty")
+        println(files?.size ?: 0)
 
         //if null 执行一个语句
         val size = files?.size ?: throw FileNotFoundException("文件夹不存在")
